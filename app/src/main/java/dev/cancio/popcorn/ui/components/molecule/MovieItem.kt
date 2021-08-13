@@ -53,10 +53,9 @@ fun MovieItem(movie: Movie = example) {
         backgroundColor = Green02,
         contentColor = Grey,
         modifier = Modifier
-            .size(
-                width = 376.dp,
-                height = 160.dp
-            )
+            .height(160.dp)
+            .width(600.dp)
+            .padding(0.dp,10.dp)
     ) {
         Row(
             modifier = Modifier
@@ -82,7 +81,9 @@ fun MovieItem(movie: Movie = example) {
                     .fillMaxHeight()
                     .fillMaxWidth()
             ) {
-                Column {
+                Column(
+                    modifier = Modifier.width(200.dp)
+                ) {
                     Text(
                         movie.title,
                         color = Grey

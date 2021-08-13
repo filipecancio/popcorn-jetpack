@@ -2,6 +2,9 @@ package dev.cancio.popcorn.ui.components.atom
 
 import android.text.Layout
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.Icon
 import androidx.compose.material.SnackbarDefaults.backgroundColor
@@ -23,14 +26,19 @@ fun TopBar(){
     TopAppBar(
         modifier = Modifier.wrapContentWidth(Alignment.CenterHorizontally),
         backgroundColor = Green03,
-        contentColor = Grey
+        contentColor = Grey,
     ) {
-        Text(
-            "Meus Filmes"
-        )
-        Icon(
-            Icons.Outlined.MoreVert,
-            "more",
-        )
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                "Meus Filmes"
+            )
+            Icon(
+                Icons.Outlined.MoreVert,
+                "more",
+            )
+        }
     }
 }
