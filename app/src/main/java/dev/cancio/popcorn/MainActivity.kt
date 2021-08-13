@@ -15,6 +15,8 @@ import dev.cancio.popcorn.model.movies
 import dev.cancio.popcorn.ui.components.atom.BottomBar
 import dev.cancio.popcorn.ui.components.atom.MovieItem
 import dev.cancio.popcorn.ui.components.atom.TopBar
+import dev.cancio.popcorn.ui.components.organism.DetailContent
+import dev.cancio.popcorn.ui.components.organism.PopcornScafolld
 import dev.cancio.popcorn.ui.theme.PopcornTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PopcornTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    MainPage()
+                    DetailPage()
                 }
             }
         }
@@ -50,7 +52,12 @@ fun MainPage() {
 
 @Composable
 fun DetailPage() {
-    Text(text = "Detail Page")
+    Scaffold(
+        backgroundColor = MaterialTheme.colors.primarySurface,
+        bottomBar = { BottomBar() },
+    ) {
+        DetailContent()
+    }
 }
 
 @Preview(showBackground = true)
@@ -58,7 +65,7 @@ fun DetailPage() {
 fun DefaultPreview() {
     PopcornTheme {
         Surface(color = MaterialTheme.colors.background) {
-            MainPage()
+            DetailPage()
         }
     }
 }

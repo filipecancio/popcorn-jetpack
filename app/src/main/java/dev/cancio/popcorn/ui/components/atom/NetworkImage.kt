@@ -27,7 +27,7 @@ fun NetworkImage(
         val painter = rememberImagePainter(
             data = url,
             builder = {
-                placeholder(drawableResId = R.drawable.cruella)
+                placeholder(drawableResId = R.drawable.poster)
             }
         )
 

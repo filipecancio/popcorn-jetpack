@@ -27,7 +27,7 @@ import dev.cancio.popcorn.ui.theme.Green02
 import dev.cancio.popcorn.ui.theme.Grey
 import dev.cancio.popcorn.ui.theme.Yellow
 
-val example = Movie(
+private val example = Movie(
     adult = false,
     backdropPath = "/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg",
     genreIds = listOf(28, 12, 35, 878),
