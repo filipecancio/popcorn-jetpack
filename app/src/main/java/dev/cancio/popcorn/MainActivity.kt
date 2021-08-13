@@ -15,9 +15,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PopcornTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    MainPage()
                 }
             }
         }
@@ -25,14 +24,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun MainPage() {
+    Text(text = "Main Page")
+}
+
+@Composable
+fun DetailPage() {
+    Text(text = "Detail Page")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     PopcornTheme {
-        Greeting("Android")
+        Surface(color = MaterialTheme.colors.background) {
+            MainPage()
+        }
     }
 }
