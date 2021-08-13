@@ -47,7 +47,6 @@ fun MovieItem() {
                 Icon(
                     Icons.Outlined.Star,
                     "star",
-                    Modifier = Modifier.
                 )
                 Text(
                     "8.9",
